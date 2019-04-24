@@ -13,7 +13,7 @@ public class KeyEntity implements Key {
     private String Title;
     private String User;
     private String Password;
-    private String Passwoed2;
+    private String Password2;
     private String Website;
     private String Email;
     private String Phone;
@@ -65,12 +65,12 @@ public class KeyEntity implements Key {
     }
 
     @Override
-    public String getPasswoed2() {
-        return Passwoed2;
+    public String getPassword2() {
+        return Password2;
     }
 
-    public void setPasswoed2(String passwoed2) {
-        Passwoed2 = passwoed2;
+    public void setPassword2(String passwoed2) {
+        Password2 = passwoed2;
     }
 
     @Override

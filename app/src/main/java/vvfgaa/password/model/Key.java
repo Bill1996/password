@@ -6,7 +6,7 @@ public interface Key {
     String getTitle();
     String getUser();
     String getPassword();
-    String getPasswoed2();
+    String getPassword2();
     String getWebsite();
     String getEmail();
     String getPhone();
