@@ -1,42 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.WelcomeActivity">
+    android:orientation="vertical"
+    android:layout_centerHorizontal="true">
     <View
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="320dp"
         android:id="@+id/topBg"
         android:background="@drawable/color"
-        android:layout_marginBottom="100dp"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="40dp"
-        android:paddingRight="40dp"
-        android:id="@+id/Input"
-        android:layout_below="@id/topBg"
-        android:orientation="vertical">
-
+        android:layout_marginBottom="96dp"/>
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
-            android:id="@+id/textUser"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:hint="@string/username">
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginBottom="16dp"
+            style="@style/InputTheme"
             android:hint="@string/password">
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
@@ -44,28 +24,40 @@
                 android:id="@+id/textPw"
                 android:inputType="textPassword"/>
         </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.button.MaterialButton
-            android:layout_width="wrap_content"
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/loginBtn"
-            android:text="@string/Confirm"
-            android:layout_gravity="center"
-            android:layout_marginTop="30dp"/>
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            style="@style/InputTheme"
+            android:hint="@string/rePassword">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textRePw"
+                android:inputType="textPassword"/>
+        </com.google.android.material.textfield.TextInputLayout>
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/loginBtn"
+        style="@style/BtnTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        android:text="@string/Confirm"
+        android:textSize="18sp" />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="32dp"
             android:gravity="center">
-
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/wrongImg"
                 android:src="@android:drawable/ic_lock_lock" />
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -73,9 +65,5 @@
                 android:text="@string/wrongPw"
                 android:textColor="@color/colorAccent"
                 android:textSize="20sp"/>
-
         </LinearLayout>
-
-    </LinearLayout>
-
-</RelativeLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>
