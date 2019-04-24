@@ -1,9 +1,11 @@
 package vvfgaa.password.ui;
 
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.EditorInfo;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -40,6 +42,21 @@ public class FirstLoginFragment extends Fragment {
             mWrongImg.setVisibility(View.GONE);
             mWrongPw.setVisibility(View.GONE);
 
+            mRePw.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+                @Override
+                public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                    //当actionId == XX_SEND 或者 XX_DONE时都触发
+                    //或者event.getKeyCode == ENTER 且 event.getAction == ACTION_DOWN时也触发
+                    //注意，这是一定要判断event != null。因为在某些输入法上会返回null。
+                    if (actionId == EditorInfo.IME_ACTION_SEND
+                            || actionId == EditorInfo.IME_ACTION_DONE
+                            || (event != null && KeyEvent.KEYCODE_ENTER == event.getKeyCode() && KeyEvent.ACTION_DOWN == event.getAction())) {
+                        //处理事件
+                        mLoginBtn.performClick();
+                    }
+                    return false;
+                }
+            });
             mLoginBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -74,5 +91,5 @@ public class FirstLoginFragment extends Fragment {
             });
                 return v;
         }
-    
+
 }
