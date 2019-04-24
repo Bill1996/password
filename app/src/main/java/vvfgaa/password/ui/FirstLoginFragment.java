@@ -63,6 +63,8 @@ public class FirstLoginFragment extends Fragment {
                         mWrongPw.setVisibility(View.GONE);
                         Snackbar.make(v, "注册成功！", Snackbar.LENGTH_SHORT).show();
 
+                        MainActivity mainActivity = (MainActivity)getActivity();
+                        mainActivity.loginToListFragment();
 //                        Intent intent=new Intent(MainActivity.this,AccountListActivity.class);
 //                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
 //                        startActivity(intent);

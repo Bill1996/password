@@ -10,33 +10,33 @@
         android:id="@+id/topBg"
         android:background="@drawable/color"
         android:layout_marginBottom="96dp"/>
-        <com.google.android.material.textfield.TextInputLayout
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="16dp"
+        style="@style/InputTheme"
+        android:hint="@string/password">
+        <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="32dp"
-            android:layout_marginRight="32dp"
-            android:layout_marginBottom="16dp"
-            style="@style/InputTheme"
-            android:hint="@string/password">
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/textPw"
-                android:inputType="textPassword"/>
-        </com.google.android.material.textfield.TextInputLayout>
-        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textPw"
+            android:inputType="textPassword"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        style="@style/InputTheme"
+        android:hint="@string/rePassword">
+        <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="32dp"
-            android:layout_marginRight="32dp"
-            style="@style/InputTheme"
-            android:hint="@string/rePassword">
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/textRePw"
-                android:inputType="textPassword"/>
-        </com.google.android.material.textfield.TextInputLayout>
+            android:id="@+id/textRePw"
+            android:inputType="textPassword"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/loginBtn"
@@ -47,23 +47,23 @@
         android:layout_marginTop="32dp"
         android:text="@string/Confirm"
         android:textSize="18sp" />
-        <LinearLayout
-            android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="32dp"
+        android:gravity="center">
+        <ImageView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="32dp"
-            android:gravity="center">
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/wrongImg"
-                android:src="@android:drawable/ic_lock_lock" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/wrongPw"
-                android:text="@string/wrongPw"
-                android:textColor="@color/colorAccent"
-                android:textSize="20sp"/>
-        </LinearLayout>
+            android:id="@+id/wrongImg"
+            android:src="@android:drawable/ic_lock_lock" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/wrongPw"
+            android:text="@string/wrongPw"
+            android:textColor="@color/colorAccent"
+            android:textSize="20sp"/>
+    </LinearLayout>
 </androidx.appcompat.widget.LinearLayoutCompat>
