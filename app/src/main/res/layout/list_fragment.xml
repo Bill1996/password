@@ -37,7 +37,8 @@
             android:layout_height="wrap_content"
             android:text="@string/chip_personal"
             android:textAppearance="?android:textAppearanceMedium"
-            android:onClick=""
+            app:closeIconVisible="false"
+            app:chipIconVisible="true"
             />
 
         <com.google.android.material.chip.Chip
