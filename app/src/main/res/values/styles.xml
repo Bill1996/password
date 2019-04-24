@@ -8,4 +8,10 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="Chip" parent="Base.Widget.MaterialComponents.Chip">
+        <item name="closeIconVisible">false</item>
+        <item name="android:checkable">true</item>
+        <item name="chipIcon">@drawable/ic_mtrl_chip_check_circle</item>
+    </style>
+
 </resources>
